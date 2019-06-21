@@ -1,0 +1,44 @@
+.body
+{
+    height : 100% ;
+    background-color: #F3F4F4;;
+    color: #575757 !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+}
+html
+{
+    height: 100%;
+    margin-top: 0px;
+}
+
+.mainDiv
+{
+    background-color: #fff;
+    border: 5px solid rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+.heading
+{
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.div-min-width
+{
+    min-width: 360px;
+
+}
+
+*
+{
+    box-sizing: border-box;
+}

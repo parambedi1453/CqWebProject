@@ -1,0 +1,40 @@
+.body
+{
+    height : 100% ;
+    background-color: #F3F4F4;;
+    color: #575757 !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+}
+html
+{
+    height: 100%;
+    margin-top: 0px;
+}
+/*#viewscreen
+{
+   height: 93.2% !important;
+   display: flex;
+}
+#rightview
+{
+    flex:1;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+.div-min-width
+{
+    min-width: 360px;
+}
+.tagMainDiv
+{
+    background: white;
+}
+.allSides
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}

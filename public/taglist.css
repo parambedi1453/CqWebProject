@@ -1,0 +1,23 @@
+.div-min-width
+{
+    min-width: 360px;
+}
+.scrollclass
+{
+    overflow:scroll;
+}
+#tagdiv
+{
+    border: 2px solid #2D312C;
+    background-color: #2D312C;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+@media (min-width: 768px)
+{
+    #containerid
+    {
+        margin-left:50px;
+    }
+
+}

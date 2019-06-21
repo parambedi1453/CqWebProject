@@ -1,0 +1,76 @@
+.div-min-width
+{
+    min-width: 368px;
+    /*overflow-x: scroll;*/
+}
+#userlist-icon
+{
+    border: 2px solid #2D312C;
+    background-color: #2D312C;
+    color: #fff;
+    width: 90px;
+    font-weight: bold;
+}
+#role{
+    width:70px;
+    border: 2px solid #2D312C;
+    background-color: #2D312C;
+    color: #fff;
+}
+#status
+{
+    width:70px;
+    border: 2px solid #2D312C;
+    background-color: #2D312C;
+    color: #fff;
+}
+/*#users-table
+{
+    border-bottom: 1px solid #111;
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    box-sizing: content-box;
+    width: 100%;
+
+}*/
+.scrollclass
+{
+    overflow:scroll;
+}
+.action-btn
+{
+    margin:5px;
+}
+#email-btn
+{
+    background-color: rgb(0, 0, 0);
+}
+#container-parent
+{
+    margin-left:10px;
+    margin-right:0px;
+}
+@media (min-width:768px)
+{
+    #role
+    {
+        width:14%;
+    }
+    #status
+    {
+        width:10%;
+    }
+    #container-parent
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #containerid
+    {
+        margin-left:50px;
+    }
+
+}

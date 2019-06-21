@@ -1,0 +1,19 @@
+#commHeader
+{
+    background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+
+}
+#first-btn
+{
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    border-bottom: 4px solid #fff !important;
+    background-color: rgba(255,255,255,0.1) !important;
+    margin-left: 100px;
+}
+#search-btn
+{
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    border: 1px solid #fff;
+}

@@ -1,0 +1,64 @@
+.div-min-width
+{
+    min-width: 360px;
+}
+.imageDiv
+{
+    display: none;
+}
+#profilepic
+{
+    width: 150px;
+    height: 150px;
+    padding: 0.25rem;
+    background-color: #FCFCFC;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    box-shadow: 0 3px 10px 0 rgba(115,143,147,.3);
+}
+.panelDiv
+{
+    box-shadow: 0 3px 10px 0 rgba(115,143,147,.3);
+}
+.to-center-div
+{
+    margin-top: 2%;
+}
+
+
+/*css for edit profilePage*/
+#mobile-pic-editpage
+{
+    height: 110px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+    text-align: center;
+}
+#blueimg
+{
+    background: rgb(255, 255, 255) !important;
+    height: 120px;
+    width: 120px;
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    vertical-align: middle;
+}
+
+@media (min-width: 768px)
+{
+    .imageDiv
+    {
+        display: block;
+    }
+    .to-center-div
+    {
+        margin-left:60px;
+    }
+    #mobile-pic-editpage
+    {
+        display:none;
+    }
+}

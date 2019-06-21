@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+
+        <title>CQ</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="sidebar.css" rel="stylesheet" type = "text/css">
+        <link href="header.css" rel="stylesheet" type = "text/css">
+        <link href = "tag.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body class="body">
+        <% include partials/header.ejs %>
+        <div id="viewscreen">
+                <% include partials/sidebar.ejs %>
+
+                <div id="rightview">
+                    <div class="container-fluid div-min-width" style="padding:0">
+                        <div class="row"  style="padding:0">
+                            <div class="col-lg-12"  style="padding:0">
+                                <div class="container" style="padding-top:100px">
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-10 col-xs-push-1 col-lg-push-3
+                                    col-sm-push-3 col-md-push-3 tagMainDiv allSides">
+                                        <h3 class = "page-header" style="color:#707070">Create Tag</h3>
+                                        <form id="tagform">
+                                            <div class="form-group">
+                                                <input class="form-control" id="input-tag" type="text" name="tagName" placeholder="Tag Name" >
+                                            </div>
+                                            <div class="form-group">
+                                                    <input id="tag-sub-btn" onclick="submittagfn('<%= obj.name %>')" class="form-control btn btn-primary" typr="submit" value="Submit">
+                                            </div>
+                                        </form>
+
+                                        </div>
+                                </div>
+
+                                <center>
+                                    <a onclick="opentaglistpage()" class="btn btn-warning btn-sm" style="margin-top:10px">Tag Lists</a>
+                                </center>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </body>
+    <script src="openpanel.js">
+    </script>
+    <script src="tag.js">
+    </script>
+</html>

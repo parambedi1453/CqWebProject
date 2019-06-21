@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CQ</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="sidebar.css" rel="stylesheet" type = "text/css">
+        <link href="header.css" rel="stylesheet" type = "text/css">
+        <!-- <link href = "communitypanel.css" type="text/css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+        <!-- BOOTSTRAP 3-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <style>
+    #commHeader
+    {
+        background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+
+    }
+    #first-btn
+    {
+        border: 1px solid #fff !important;
+        color: #fff !important;
+        border-bottom: 4px solid #fff !important;
+        background-color: rgba(255,255,255,0.1) !important;
+        margin-left: 100px;
+    }
+    #search-btn
+    {
+        background-color: rgba(255,255,255,0.1);
+        color: #fff;
+        border: 1px solid #fff;
+    }
+    #commPanel
+    {
+        border: 0;
+        border-radius: 0;
+        margin-top: 50px;
+        box-shadow: 0 3px 10px 0 rgba(115,143,147,.3)
+    }
+    #panelHeading
+    {
+        border-radius: 0;
+        background-image: linear-gradient(to top, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+    }
+    </style>
+    <body class="body">
+        <% include partials/header.ejs %>
+            <div id = "viewscreen">
+                    <% include partials/sidebar.ejs %>
+                    <div id="rightview">
+
+                        <div class="container-fluid" style="padding:0;min-width:368px;">
+                            <div class="row">
+
+                                <!-- MODAL DIVS  -->
+
+                                <div id="cancelModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-sm" style="position:relative;top:35%!important;">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Cancel Request ?</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Do you really want to cancel request ...... </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" id="cancelyes" class="btn btn-success" data-dismiss="modal">Yes</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ***************** -->
+                                <div id="commHeader" style="height:50px;padding-top:6px;">
+                                    <div class="col-sm-12">
+                                        <a class="btn" id="first-btn">
+                                            <i class="fa fa-users"></i>
+                                        </a>
+                                        <a class="btn" id="search-btn" style="margin-left:10px;">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p id="getuserId" style="display:none;"><%= obj._id %></p>
+
+
+                                <!-- ***************************************  -->
+                                <div class="container">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default" id="commPanel">
+                                            <div class="panel-heading" id="panelHeading">
+                                                <p style="color:white;margin-top:6px;font-weight:bold">MY Communities</p>
+                                                <a class="btn btn-info" style="float:right;margin-top:-35px;border-color:white;" id="createBtn">Create</a>
+                                            </div>
+                                            <div class="panel-body"  id ="panelBody" style="padding-bottom:0;">
+                                                <div id="firstDiv">
+                                                </div>
+                                                <div id="secondDiv">
+                                                </div>
+                                                <div id="thirdDiv">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </body>
+    <script src ="openpanel.js">
+    </script>
+    <script src = "communitypanel.js">
+    </script>
+
+</html>

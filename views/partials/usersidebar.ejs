@@ -1,0 +1,79 @@
+<div id="sidebar">
+    <ul class="sidebar-list">
+        <li class="list" id="mobile-pic">
+            <div style="margin-right:10px">
+                <center>
+                    <img src="/default.png" id="mobile-img">
+                </center>
+            </div>
+        </li>
+
+        <li class="list" id="bars">
+        <a onclick="openbar()" id="open">
+            <span class="list-span">
+                <i class="fas fa-bars" id="icon"></i>
+            </span>
+                Cq
+        </a>
+        </li>
+
+        <li class="list" id="sidebar-user">
+        <a onclick="getUserProfile()">
+            <span class="list-span">
+                <i class="fa fa-user" id="icon"></i>
+            </span>
+                <%= obj.name %>
+        </a>
+        </li>
+
+        <li class="list" id="sidebar-users">
+        <a onclick="getCommPage()">
+            <span class="list-span">
+                <i class="fa fa-users" id="icon"></i>
+            </span>
+                Communities
+        </a>
+        </li>
+
+        <li class="list" id="sidebar-password">
+            <a onclick="getPasswordPage()">
+                <span class="list-span">
+                    <i class="fas fa-lock" id="icon"></i>
+                </span>
+                Change Password
+            </a>
+        </li>
+
+        <li class="list">
+            <a data-toggle="modal" data-target="#logModal">
+                <span class="list-span">
+                    <i class="fas fa-sign-out-alt" id="icon"></i>
+                </span>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<!-- LOGOUT MODAL -->
+<div id="logModal" class="modal fade" role="dialog" style="background-color: rgba(54,70,93,0.95);color:white;">
+    <div class="modal-dialog" style="position:relative;top:35%!important;">
+        <center>
+        <div>
+            <div >
+                <h3 >Confirm Logout!</h3>
+            </div>
+            <br>
+            <div >
+                <p>Do you really want logout?</p>
+            </div>
+            <br>
+            <div >
+                <button type="button" class="btn btn-success logoutbtncss" onclick="gotologinpage()" style="background-color: #303f53;text-shadow: none;border: 0;font-size: 16px;border-radius: 2px;padding: 10px;min-width: 100px;">Yes</button>
+                <button type="button" class="btn btn-danger logoutbtncss" data-dismiss="modal" style="background-color: #303f53;text-shadow: none;border: 0;font-size: 16px;border-radius: 2px;padding: 10px;min-width: 100px;">No</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CQ</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="usersidebar.css" rel="stylesheet" type = "text/css">
+        <link href="userheader.css" rel="stylesheet" type = "text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+
+
+        <!-- BOOTSTRAP 3-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link href="trumbowyg.css" rel="stylesheet" type = "text/css">
+        <script src="trumbowyg.min.js"></script>
+
+    </head>
+    <style>
+        #commHeader
+        {
+            background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+
+        }
+        #first-btn
+        {
+            border: 1px solid #fff !important;
+            color: #fff !important;
+            border-bottom: 4px solid #fff !important;
+            background-color: rgba(255,255,255,0.1) !important;
+            margin-left: 100px;
+        }
+        #search-btn
+        {
+            background-color: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        #containerDiv
+        {
+            padding-left:25%;
+            padding-right:25%;
+        }
+        @media (min-width:768px)
+        {
+            #containerDiv
+            {
+                padding-left:10%;
+                padding-right:10%;
+            }
+        }
+
+    </style>
+    <body class="body">
+        <% include partials/userheader.ejs %>
+            <div id="viewscreen">
+                <% include partials/usersidebar.ejs %>
+                    <div id="rightview">
+                        <div class="container-fluid" style="padding:0;min-width:368px;">
+                            <div class="row">
+                                <div id="commHeader" style="height:50px;padding-top:6px;">
+                                    <div class="col-sm-12">
+                                        <a class="btn" id="first-btn">
+                                            <i class="fa fa-users"></i>
+                                        </a>
+                                        <a class="btn" id="search-btn" style="margin-left:10px;">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- ***************************************  -->
+                                <center>
+                                    <div class="container" id="containerDiv">
+                                        <div class="form-horizontal">
+                                            <h3 style="color:#707070;padding-bottom: 9px;margin: 40px 0 20px; order-bottom: 1px solid #eee;">Create Community</h3>
+                                            <div>
+                                                <div class="form-group" >
+                                                <input  type="text" placeholder="Name" id="commName" name="commName" required>
+                                                    </div>
+
+                                                <div class="form-group">
+                                                    <label style="color:#707070;">Description</label>
+                                                    <textarea id="descArea" name="descArea">
+                                                    </textarea>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label style="color: #707070;">Rule:</label>
+                                                    <input class="radio radio-inline" type="radio"  value="d" id="commRule1" name="joinrule">
+                                                    Direct
+                                                    <input class="radio radio-inline" type="radio"  value="p" id="commRule2" name="joinrule">
+                                                    Permission
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button id="uploadImage">Upload Image</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="btn btn-primary" type="submit" value="Create Community" id="createCommbtn" onclick="submitCommunity('<%= obj.name %>','<%= obj._id %>')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </center>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </body>
+    <script src="userOpenpanel.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+          $.trumbowyg.svgPath="trumbowyg.svg"
+          $("#descArea").trumbowyg();
+       })
+    </script>
+    <script src = "addcommunity.js">
+    </script>
+</html>

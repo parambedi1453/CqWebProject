@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CQ</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="sidebar.css" rel="stylesheet" type = "text/css">
+        <link href="header.css" rel="stylesheet" type = "text/css">
+        <link href="admincomm.css" rel="stylesheet" type= "text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    </head>
+    <body class="body">
+        <% include partials/header.ejs %>
+            <div id="viewscreen">
+                <% include partials/sidebar.ejs %>
+                    <div id="rightview">
+                        <div class="container-fluid div-min-width" id="containerid" style="padding:0" >
+                            <div class="row">
+                                <div class="col-lg-12 scrollclass" style="margin-left:25px;">
+                                    <div style="margin-left:20px;margin-right:20px;margin-top:1%;">
+                                        <center>
+                                        <!-- MODAL DIVS -->
+
+                                        <div id="editCommModal" class="modal fade" role="dialog"  style="z-index:9999;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" id="closemail" data-dismiss="modal">x</button>
+                                                        <h4 class="modal-title" id="setModalTitle"></h4>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <div class="form-horizontal">
+
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2">Community Name</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="communityname" placeholder="Community Name">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2">Community Status</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="communitystatus" placeholder="Community Status">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="col-sm-offset-2 col-sm-10">
+                                                                    <button class="btn btn-default pull-left" id="updateCommbttn"  data-dismiss="modal">Update</button>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- INFORMATION MODAL   ----->
+
+                                        <div id="infoModal" class="modal fade" role="dialog"  style="z-index:9999;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button class="pull-right" type="button" id="closemail" data-dismiss="modal">x</button>
+                                                        <div id="commpic">
+                                                            <img class="pull-left" src="defaultcomm.png" style="height:50px;width:50px;">
+                                                        </div>
+                                                        <p id="sethead"></p>
+                                                    </div>
+
+                                                    <div class="modal-body">
+
+                                                        <p style="font-size:15px;font-weight:bold;">Community Description</p>
+                                                        <div class="well well-lg" id="descmodal">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--********************* -->
+                                        </center>
+
+                                        <!-- AFTER MODAL **-->
+                                            <div class="form-control" id="commlist-icon" style="float:left;">Community List
+                                            </div>
+
+                                            <select class="form-control" id="joinrule" style="float:right;margin-left:10px;">
+                                                <option value="all">All</option>
+                                                <option value="d">Direct</option>
+                                                <option value="p">Permission</option>
+                                            </select>
+
+                                            <button class="btn btn-default" id="refresh" style="float:right;background-color: #2D312C;color: #fff;">
+                                                <span><i class="fa fa-refresh"></i></span>
+                                                Refresh
+                                            </button>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <div class="table-responsive">
+                                                    <table class="table table-striped table-condensed table-hover " id="community-table"  style="display:table;width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Community Name</th>
+                                                                <th>Membership Rule</th>
+                                                                <th>Community Location</th>
+                                                                <th>Community Owner</th>
+                                                                <th>Current Date</th>
+                                                                <th>Actions</th>
+                                                                <th>Community Pic</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody id="table-body">
+
+
+                                                        </tbody>
+                                                    </table>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+    </body>
+    <script src="openpanel.js">
+    </script>
+    <script src="admincomm.js">
+    </script>
+</html>

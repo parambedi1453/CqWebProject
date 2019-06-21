@@ -1,0 +1,52 @@
+<nav id="navbar">
+
+        <div class="container-fluid">
+            <div id="leftpanel" style="float:left;">
+                 <a id="cq" class="navbar-brand" href="#">cq</a>
+
+
+                 <a data-toggle="modal" data-target="#logModal">
+                     <span class="list-span">
+                         <i class="fas fa-sign-out-alt" id="icon"></i>
+                     </span>
+                 </a>
+            </div>
+
+            <div id="rightpanel" style="float:right;">
+
+                <img src="default.png" id="dpimage" onclick="openeditpage()" style="height:40px;width: 40px;float:right;">
+
+
+            <!--    <span class="label label-success" id="rightadmin" style="float:right;">
+                    Admin
+                </span>-->
+
+                <span class="label label-warning" id="sadmin" style="float:right;">
+                    <%= obj.name %>
+                </span>
+
+            </div>
+        </div>
+
+</nav>
+<!-- LOGOUT MODAL -->
+<div id="logModal" class="modal fade" role="dialog" style="background-color: rgba(54,70,93,0.95);color:white;">
+    <div class="modal-dialog" style="position:relative;top:35%!important;">
+        <center>
+        <div>
+            <div >
+                <h3 >Confirm Logout!</h3>
+            </div>
+            <br>
+            <div >
+                <p>Do you really want logout?</p>
+            </div>
+            <br>
+            <div >
+                <button type="button" class="btn btn-success logoutbtncss" onclick="gotologinpage()" style="background-color: #303f53;text-shadow: none;border: 0;font-size: 16px;border-radius: 2px;padding: 10px;min-width: 100px;">Yes</button>
+                <button type="button" class="btn btn-danger logoutbtncss" data-dismiss="modal" style="background-color: #303f53;text-shadow: none;border: 0;font-size: 16px;border-radius: 2px;padding: 10px;min-width: 100px;">No</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

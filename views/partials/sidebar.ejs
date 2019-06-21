@@ -1,0 +1,292 @@
+<!--
+<div id="sidebar">
+    <ul class="sidebar-list">
+        <li class="list" id="mobile-pic">
+            <div style="margin-right:10px">
+                <center>
+                    <img src="default.png" id="mobile-img">
+                </center>
+            </div>
+        </li>
+        <li class="list" id="bars">
+        <a onclick="openbar()" id="open">
+            <span class="list-span">
+                <i class="fas fa-bars" id="icon"></i>
+            </span>
+                Cq
+        </a>
+        </li>
+
+        <li class="list">
+            <a onclick="homepage()">
+                <span class="list-span">
+                    <i class="fas fa-home" id="icon"></i>
+                </span>
+                Home
+            </a>
+        </li>
+
+        <li class="list">
+            <a onclick="open_adduser_page()">
+                <span class="list-span">
+                    <i class="fas fa-plus-square" id="icon"></i>
+                </span>
+                Add User
+            </a>
+        </li>
+
+
+        <li class="list">
+            <a onclick="openuserlist()">
+                <span class="list-span">
+                    <i class="fas fa-list" id="icon"></i>
+                </span>
+                Users List
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="#">
+                <span class="list-span">
+                    <i class ="	fas fa-list-alt" id="icon"></i>
+                </span>
+                Community List
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="#">
+                <span class="list-span">
+                    <i class="fas fa-toggle-off" id="icon"></i>
+                </span>
+                Switch As User
+            </a>
+        </li>
+
+        <li class="list">
+            <a onclick="opentagpage()">
+                <span class="list-span">
+                    <i class="fas fa-tags" id="icon"></i>
+                </span>
+                Tag Panel
+            </a>
+        </li>
+
+        <li class="list">
+            <a onclick="changepassword()">
+                <span class="list-span">
+                    <i class="fas fa-lock" id="icon"></i>
+                </span>
+                Change Password
+            </a>
+        </li>
+
+        <li class="list">
+            <a onclick="openlogoutpage()">
+                <span class="list-span">
+                    <i class="fas fa-sign-out-alt" id="icon"></i>
+                </span>
+                Logout
+            </a>
+        </li>
+
+
+
+    </ul>
+</div>-->
+<div id="sidebar">
+    <ul class="sidebar-list">
+        <li class="list" id="mobile-pic">
+            <div style="margin-right:10px">
+                <center>
+                    <img src="<%= obj.photoname %>" id="mobile-img">
+                </center>
+            </div>
+        </li>
+        <li class="list" id="bars">
+        <a onclick="openbar()" id="open">
+            <span class="list-span">
+                <i class="fas fa-bars" id="icon"></i>
+            </span>
+                Cq
+        </a>
+        </li>
+
+        <!-----** SWITCH AS PANEL **-- -->
+
+        <li class="list" id="sidebar-user">
+        <a onclick="updateprofilepage()">
+            <span class="list-span">
+                <i class="fa fa-user" id="icon"></i>
+            </span>
+                <%= obj.name %>
+        </a>
+        </li>
+
+        <li class="list" id="sidebar-users">
+        <a onclick="openCommpage()">
+            <span class="list-span">
+                <i class="fa fa-users" id="icon"></i>
+            </span>
+                Communities
+        </a>
+        </li>
+
+        <li class="list" id="sidebar-switchuser">
+            <a data-toggle="modal" data-target="#switchAsAdmin">
+                <span class="list-span">
+                    <i class="fas fa-toggle-on" id="icon"></i>
+                </span>
+                Switch As User
+            </a>
+        </li>
+
+        <li class="list" id="sidebar-password2">
+            <a onclick="changepassword2()">
+                <span class="list-span">
+                    <i class="fas fa-lock" id="icon"></i>
+                </span>
+                Change Password
+            </a>
+        </li>
+
+        <!-- *********************  -->
+
+        <li class="list" id="sidebar-home">
+            <a onclick="homepage()">
+                <span class="list-span">
+                    <i class="fas fa-home" id="icon"></i>
+                </span>
+                Home
+            </a>
+        </li>
+
+        <li class="list" id="sidebar-add">
+            <a onclick="open_adduser_page()">
+                <span class="list-span">
+                    <i class="fas fa-plus-square" id="icon"></i>
+                </span>
+                Add User
+            </a>
+        </li>
+
+
+        <li class="list" id="sidebar-list">
+            <a onclick="openuserlist()">
+                <span class="list-span">
+                    <i class="fas fa-list" id="icon"></i>
+                </span>
+                Users List
+            </a>
+        </li>
+
+        <li class="list" id="sidebar-comm">
+            <a onclick="admincomm()">
+                <span class="list-span">
+                    <i class ="	fas fa-list-alt" id="icon"></i>
+                </span>
+                Community List
+            </a>
+        </li>
+
+        <li class="list" id="sidebar-admin">
+            <a  data-toggle="modal" data-target="#myModal">
+                <span class="list-span">
+                    <i class="fas fa-toggle-off" id="icon"></i>
+                </span>
+                Switch As User
+            </a>
+        </li>
+
+        <li class="list" id="sidebar-tag">
+            <a onclick="opentagpage()">
+                <span class="list-span">
+                    <i class="fas fa-tags" id="icon"></i>
+                </span>
+                Tag Panel
+            </a>
+        </li>
+
+        <li class="list" id="sidebar-password">
+            <a onclick="changepassword()">
+                <span class="list-span">
+                    <i class="fas fa-lock" id="icon"></i>
+                </span>
+                Change Password
+            </a>
+        </li>
+
+        <li class="list">
+            <a data-toggle="modal" data-target="#logModal">
+                <span class="list-span">
+                    <i class="fas fa-sign-out-alt" id="icon"></i>
+                </span>
+                Logout
+            </a>
+        </li>
+
+
+    </ul>
+</div>
+<!-- Switch As User MODAL -->
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm" style="position:relative;top:35%!important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Switch As User</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you really want switch state...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" onclick="switchyes()">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Switch As ADMIN MODAL -->
+
+<div id="switchAsAdmin" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm" style="position:relative;top:35%!important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Switch As User</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you really want switch state...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" onclick="switchToadmin()">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- LOGOUT MODAL -->
+<div id="logModal" class="modal fade" role="dialog" style="background-color: rgba(54,70,93,0.95);color:white;">
+    <div class="modal-dialog" style="position:relative;top:35%!important;">
+        <center>
+        <div>
+            <div >
+                <h3 >Confirm Logout!</h3>
+            </div>
+            <br>
+            <div >
+                <p>Do you really want logout?</p>
+            </div>
+            <br>
+            <div >
+                <button type="button" class="btn btn-success logoutbtncss" onclick="gotologinpage()" style="background-color: #303f53;text-shadow: none;border: 0;font-size: 16px;border-radius: 2px;padding: 10px;min-width: 100px;">Yes</button>
+                <button type="button" class="btn btn-danger logoutbtncss" data-dismiss="modal" style="background-color: #303f53;text-shadow: none;border: 0;font-size: 16px;border-radius: 2px;padding: 10px;min-width: 100px;">No</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

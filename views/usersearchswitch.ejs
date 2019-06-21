@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CQ</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="sidebar.css" rel="stylesheet" type = "text/css">
+        <link href="header.css" rel="stylesheet" type = "text/css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+
+        <!-- BOOTSTRAP 3-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <style>
+    #commHeader
+    {
+        background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+
+    }
+    #first-btn
+    {
+        border: 1px solid #fff !important;
+        color: #fff !important;
+        border-bottom: 4px solid #fff !important;
+        background-color: rgba(255,255,255,0.1) !important;
+        margin-left: 100px;
+    }
+    #search-btn
+    {
+        background-color: rgba(255,255,255,0.1);
+        color: #fff;
+        border: 1px solid #fff;
+    }
+    #commPanel
+    {
+        border: 0;
+        border-radius: 0;
+        margin-top: 50px;
+        box-shadow: 0 3px 10px 0 rgba(115,143,147,.3)
+    }
+    #panelHeading
+    {
+        border-radius: 0;
+        background-image: linear-gradient(to top, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+    }
+    #memeberpara
+    {
+        padding: 0;
+    margin: 0;
+    font-weight: 600;
+    color: #7D7D7D;
+    text-decoration: none;
+    word-wrap: break-word;
+    text-transform: capitalize;
+    }
+    #descpara
+    {
+        border: 0;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: #000;
+    outline: none !important;
+    background-color: rgba(0, 0, 0, 0);
+    }
+    </style>
+    <body class="body">
+        <% include partials/header.ejs %>
+            <div id="viewscreen">
+                <% include partials/sidebar.ejs %>
+                    <div id="rightview">
+                        <div class="container-fluid" style="padding:0;min-width:368px;">
+                            <div class="row">
+                                <div id="commHeader" style="height:50px;padding-top:6px;">
+                                    <div class="col-sm-4" style="width:50%;">
+                                        <a class="btn" id="first-btn">
+                                            <i class="fa fa-users"></i>
+                                        </a>
+                                        <a class="btn" id="search-btn" style="margin-left:10px;">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4" style="width:50%;">
+                                        <input class="form-control" id = "searchinput" type="text" placeholder="Search Community...">
+                                    </div>
+                                </div>
+
+                                <!-- ***************************************  -->
+                                <div class="container">
+                                    <div id="bigDiv" style="margin-top:2%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </body>
+    <script src="openpanel.js">
+    </script>
+    <script src="usersearchswitch.js">
+    </script>
+
+</html>

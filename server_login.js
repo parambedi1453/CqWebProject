@@ -332,13 +332,13 @@ app.post('/createuser',function(req,res){
             var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-            user: 'parambedi1453@gmail.com',
-            pass: 'nokia15091998'
+            user: 'sending email',
+            pass: 'sending email password'
             }
             });
 
             var mailOptions = {
-            from: 'parambedi1453@gmail.com',
+            from: 'sending mail',
             to: req.body.email,
             subject: 'This Mail Is From CQ',
             text: 'Hi you are enrolled to cq with username'+req.body.email+'and password'+req.body.password
@@ -700,13 +700,13 @@ app.post('/mailPostrequest',function(req,res)
     var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-    user: 'parambedi1453@gmail.com',
-    pass: 'nokia15091998'
+    user: 'mention email from where mail will be send',
+    pass: 'mentioned email password'
     }
     });
 
     var mailOptions = {
-    from: 'parambedi1453@gmail.com',
+    from: 'sending mail',
     to: req.body.email,
     subject: req.body.subject,
     text: req.body.textarea,
@@ -1029,8 +1029,8 @@ app.post('/upload',(req,res) => {
 
     passport.use(
         new GitHubStrategy({
-        clientID:'acea048c1c8e998add96',
-        clientSecret: '08bd6b88a0b9806bb0bb1ff781a562ac1d1d830e',
+        clientID:'put github ckient id here',
+        clientSecret: 'put client secret here',
         callbackURL: "/auth/github/callback",
         session:true
     },function(accessToken, refreshToken, profile, cb) {
